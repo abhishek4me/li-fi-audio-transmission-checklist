@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Li-Fi Audio Transmission Components Checklist</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background: #f8f9fa;
+      color: #333;
+    }
+    h2 {
+      color: #2c3e50;
+      text-align: center;
+      margin-bottom: 25px;
+    }
+    label {
+      font-size: 1.3em;
+      cursor: pointer;
+      display: block;
+      margin-bottom: 15px;
+      user-select: none;
+    }
+    input[type="checkbox"] {
+      width: 28px;
+      height: 28px;
+      margin-right: 15px;
+      vertical-align: middle;
+      cursor: pointer;
+    }
+    .section-title {
+      color: #2980b9;
+      margin-top: 30px;
+      margin-bottom: 15px;
+      font-weight: bold;
+      font-size: 1.6em;
+      border-bottom: 2px solid #2980b9;
+      padding-bottom: 8px;
+    }
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      background: #fff;
+      padding: 20px 30px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+      border-radius: 8px;
+    }
+    .images {
+      margin-top: 40px;
+      text-align: center;
+    }
+    .images img {
+      max-width: 100%;
+      height: auto;
+      margin: 15px 0;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Li-Fi Audio Transmission Components Checklist</h2>
+
+    <div class="section-title">Transmitter Components</div>
+    <label><input type="checkbox" id="laser-diode" />Laser Diode Module (5mW, 5V) or 1W LED</label>
+    <label><input type="checkbox" id="audio-jack-tx" />3.5 mm Audio Jack / Aux Cable</label>
+    <label><input type="checkbox" id="resistor-tx" />100Ω Resistor (Current Limiting)</label>
+    <label><input type="checkbox" id="battery-tx" />9V Battery</label>
+    <label><input type="checkbox" id="connector-tx" />9V Battery Connector</label>
+    <label><input type="checkbox" id="breadboard-tx" />Breadboard or Perfboard</label>
+    <label><input type="checkbox" id="wires-tx" />Jumper Wires</label>
+
+    <div class="section-title">Receiver & Amplifier Components</div>
+    <label><input type="checkbox" id="solar-panel" />Solar Panel (5–6V, 100mA) or Photodiode</label>
+    <label><input type="checkbox" id="lm386-ic" />LM386 Audio Amplifier IC</label>
+    <label><input type="checkbox" id="capacitors-0-1uf" />0.1μF Capacitor (Decoupling)</label>
+    <label><input type="checkbox" id="capacitors-10uf" />10μF Capacitor (Input/Gain)</label>
+    <label><input type="checkbox" id="capacitors-100uf" />100μF Capacitor (Power Supply Filtering)</label>
+    <label><input type="checkbox" id="capacitors-220uf" />220μF Capacitor (Output Coupling, Optional)</label>
+    <label><input type="checkbox" id="capacitors-1000uf" />1000μF Capacitor (Optional for Smoothing)</label>
+    <label><input type="checkbox" id="resistor-10k" />10kΩ Resistor (Audio Input)</label>
+    <label><input type="checkbox" id="potentiometer-10k" />10kΩ Potentiometer (Volume Adjustment)</label>
+    <label><input type="checkbox" id="speaker" />Speaker (8Ω, 0.5W or Pre-amplified Speaker)</label>
+    <label><input type="checkbox" id="battery-rx" />9V Battery (Amplifier Power)</label>
+    <label><input type="checkbox" id="connector-rx" />9V Battery Connector</label>
+    <label><input type="checkbox" id="audio-jack-rx" />3.5 mm Audio Jack / Aux Cable (Amplifier to Speaker)</label>
+    <label><input type="checkbox" id="breadboard-rx" />Breadboard or Perfboard</label>
+    <label><input type="checkbox" id="wires-rx" />Jumper Wires</label>
+
+    <div class="images">
+      <h3>Circuit Diagrams</h3>
+      <img src="https://circuitdigest.com/sites/default/files/circuitdiagram/Circuit-diagram-for-Audio-transfer-using-LED-and-Li-Fi-Technology.png" alt="LiFi Audio Transfer Circuit Diagram" />
+      <img src="https://circuitdigest.com/sites/default/files/inlineimages/u/Transmitter-Circuit-for-Li-Fi.jpg" alt="Transmitter Circuit for LiFi" />
+    </div>
+  </div>
+</body>
+</html>
