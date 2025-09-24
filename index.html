@@ -1,100 +1,286 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Li-Fi Audio Transmission Components Checklist</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 20px;
-      background: #f8f9fa;
-      color: #333;
-    }
-    h2 {
-      color: #2c3e50;
-      text-align: center;
-      margin-bottom: 25px;
-    }
-    label {
-      font-size: 1.3em;
-      cursor: pointer;
-      display: block;
-      margin-bottom: 15px;
-      user-select: none;
-    }
-    input[type="checkbox"] {
-      width: 28px;
-      height: 28px;
-      margin-right: 15px;
-      vertical-align: middle;
-      cursor: pointer;
-    }
-    .section-title {
-      color: #2980b9;
-      margin-top: 30px;
-      margin-bottom: 15px;
-      font-weight: bold;
-      font-size: 1.6em;
-      border-bottom: 2px solid #2980b9;
-      padding-bottom: 8px;
-    }
-    .container {
-      max-width: 600px;
-      margin: 0 auto;
-      background: #fff;
-      padding: 20px 30px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-      border-radius: 8px;
-    }
-    .images {
-      margin-top: 40px;
-      text-align: center;
-    }
-    .images img {
-      max-width: 100%;
-      height: auto;
-      margin: 15px 0;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-    }
-  </style>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Audio Transfer Using Li-Fi Technology - Presentation</title>
+<style>
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f4f8;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+  .slide {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: white;
+    width: 90vw;
+    height: 90vh;
+    max-width: 900px;
+    max-height: 600px;
+    padding: 40px;
+    margin: 40px auto;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+    box-sizing: border-box;
+  }
+  .slide.active {
+    display: flex;
+  }
+  h1, h2 {
+    color: #174ea6; 
+    margin: 0 0 20px 0;
+  }
+  h1 {
+    font-size: 2.8rem;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+  ul {
+    list-style-type: disc;
+    margin-left: 24px;
+    font-size: 1.15rem;
+    color: #333;
+  }
+  p {
+    font-size: 1.15rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+    color: #333;
+  }
+  .team-list {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 1.5rem;
+  }
+  .nav-buttons {
+    text-align: center;
+    margin: 15px 0 40px 0;
+  }
+  button {
+    background-color: #174ea6;
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+    padding: 12px 28px;
+    margin: 0 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  button:disabled {
+    background-color: #a5b5d6;
+    cursor: not-allowed;
+  }
+</style>
 </head>
 <body>
-  <div class="container">
-    <h2>Li-Fi Audio Transmission Components Checklist</h2>
 
-    <div class="section-title">Transmitter Components</div>
-    <label><input type="checkbox" id="laser-diode" />Laser Diode Module (5mW, 5V) or 1W LED</label>
-    <label><input type="checkbox" id="audio-jack-tx" />3.5 mm Audio Jack / Aux Cable</label>
-    <label><input type="checkbox" id="resistor-tx" />100Ω Resistor (Current Limiting)</label>
-    <label><input type="checkbox" id="battery-tx" />9V Battery</label>
-    <label><input type="checkbox" id="connector-tx" />9V Battery Connector</label>
-    <label><input type="checkbox" id="breadboard-tx" />Breadboard or Perfboard</label>
-    <label><input type="checkbox" id="wires-tx" />Jumper Wires</label>
+<div class="slide active" id="slide1">
+  <h1>Audio Transfer Using Li-Fi Technology</h1>
+  <p>Course Project Presentation</p>
+  <p><strong>Guide:</strong> Mr. Glastin Y V</p>
+  <p><strong>Team Members:</strong></p>
+  <ul class="team-list">
+    <li>Abhishek R S (MCE24ECE010)</li>
+    <li>Karan A S (MCE24ECE036)</li>
+    <li>Karthik R K (MCE24ECE038)</li>
+    <li>Mohamed Sabith Hameed (MCE24ECE043)</li>
+  </ul>
+  <p><strong>Department:</strong> Electronics and Computer Science</p>
+</div>
 
-    <div class="section-title">Receiver & Amplifier Components</div>
-    <label><input type="checkbox" id="solar-panel" />Solar Panel (5–6V, 100mA) or Photodiode</label>
-    <label><input type="checkbox" id="lm386-ic" />LM386 Audio Amplifier IC</label>
-    <label><input type="checkbox" id="capacitors-0-1uf" />0.1μF Capacitor (Decoupling)</label>
-    <label><input type="checkbox" id="capacitors-10uf" />10μF Capacitor (Input/Gain)</label>
-    <label><input type="checkbox" id="capacitors-100uf" />100μF Capacitor (Power Supply Filtering)</label>
-    <label><input type="checkbox" id="capacitors-220uf" />220μF Capacitor (Output Coupling, Optional)</label>
-    <label><input type="checkbox" id="capacitors-1000uf" />1000μF Capacitor (Optional for Smoothing)</label>
-    <label><input type="checkbox" id="resistor-10k" />10kΩ Resistor (Audio Input)</label>
-    <label><input type="checkbox" id="potentiometer-10k" />10kΩ Potentiometer (Volume Adjustment)</label>
-    <label><input type="checkbox" id="speaker" />Speaker (8Ω, 0.5W or Pre-amplified Speaker)</label>
-    <label><input type="checkbox" id="battery-rx" />9V Battery (Amplifier Power)</label>
-    <label><input type="checkbox" id="connector-rx" />9V Battery Connector</label>
-    <label><input type="checkbox" id="audio-jack-rx" />3.5 mm Audio Jack / Aux Cable (Amplifier to Speaker)</label>
-    <label><input type="checkbox" id="breadboard-rx" />Breadboard or Perfboard</label>
-    <label><input type="checkbox" id="wires-rx" />Jumper Wires</label>
+<div class="slide" id="slide2">
+  <h2>Introduction to Li-Fi</h2>
+  <p>Li-Fi (Light Fidelity) is a cutting-edge wireless communication technology that utilizes the visible light spectrum for data transmission instead of traditional radio waves.</p>
+  <p>Introduced by Prof. Harald Haas in 2011, Li-Fi offers several key benefits, including high-speed data transmission, enhanced security due to confined light waves, and resistance to electromagnetic interference, making it an advantageous alternative to Wi-Fi.</p>
+  <p>In this project, we focus on using Li-Fi to transfer audio signals wirelessly, demonstrating a practical application of this technology.</p>
+</div>
 
-    <div class="images">
-      <h3>Circuit Diagrams</h3>
-      <img src="https://circuitdigest.com/sites/default/files/circuitdiagram/Circuit-diagram-for-Audio-transfer-using-LED-and-Li-Fi-Technology.png" alt="LiFi Audio Transfer Circuit Diagram" />
-      <img src="https://circuitdigest.com/sites/default/files/inlineimages/u/Transmitter-Circuit-for-Li-Fi.jpg" alt="Transmitter Circuit for LiFi" />
-    </div>
-  </div>
+<div class="slide" id="slide3">
+  <h2>Motivation and Project Objectives</h2>
+  <p>With the rapid growth of Internet of Things (IoT) devices, smart home systems, and industrial automation, bandwidth demand is escalating.</p>
+  <p>Conventional RF-based wireless methods face challenges like bandwidth saturation, interference, and security risks.</p>
+  <p>Our motivation is to explore Li-Fi-based wireless audio transmission, leveraging visible light’s broader spectrum to overcome these challenges.</p>
+  <p>The objective is to design and implement a simple yet effective Li-Fi audio transmission system capable of modulating audio signals onto a light source and recovering them at the receiver with good fidelity.</p>
+</div>
+
+<div class="slide" id="slide4">
+  <h2>Applications of Li-Fi Technology</h2>
+  <ul>
+    <li>Smart homes and offices: High bandwidth multimedia streaming and control without RF congestion.</li>
+    <li>Healthcare: Secure wireless communication in radio-sensitive environments.</li>
+    <li>Underwater communication: Optical wireless links using LEDs or lasers where RF fails.</li>
+    <li>Industrial automation: Reliable wireless sensor networks without electromagnetic interference.</li>
+    <li>Audio streaming: Wireless transmission of audio content without delay or interference.</li>
+  </ul>
+</div>
+
+<div class="slide" id="slide5">
+  <h2>Basic Working Principle of Li-Fi</h2>
+  <p>Li-Fi technology modulates data by varying the intensity of a light source (LED or laser) at high frequency imperceptible to the human eye.</p>
+  <p>Audio input is transformed into an electrical signal that modulates the light emission. At the receiver, a solar panel or photodiode detects changes in incoming light intensity and converts it back into an electrical signal.</p>
+  <p>This signal is amplified using an audio amplifier circuit (LM386) to drive a speaker, reproducing the original audio wirelessly using light.</p>
+</div>
+
+<div class="slide" id="slide6">
+  <h2>System Overview</h2>
+  <ul>
+    <li><strong>Transmitter:</strong> Integrates an audio source connected via a 3.5mm jack to a modulating LED or laser diode powered by a 9V supply. The audio signal varies the brightness of the light source to encode the sound data.</li>
+    <li><strong>Receiver:</strong> Includes a solar panel or photodiode that receives the modulated light, followed by an LM386 amplifier circuit. The amplified output drives a speaker to produce clear audio.</li>
+  </ul>
+  <p>This analog modulation technique ensures real-time transmission of sound without digital encoding, ideal for simple applications and demonstrations.</p>
+</div>
+
+<div class="slide" id="slide7">
+  <h2>Transmitter Circuit Description</h2>
+  <p>The transmitter section uses a high-brightness 1W LED or a 5mW laser diode as the light source.</p>
+  <p>The audio input from devices like smartphones or laptops is connected via a 3.5mm aux cable. A 100Ω resistor limits current to the LED/laser diode powered by a 9V battery.</p>
+  <p>The audio signal modulates the LED intensity, making the light flicker in accordance with the sound waveform.</p>
+  <p>This flicker, too rapid for the human eye, carries the audio information through the visible light spectrum.</p>
+  <p><em>Insert circuit image of the transmitter here.</em></p>
+</div>
+
+<div class="slide" id="slide8">
+  <h2>Receiver Circuit Description</h2>
+  <p>The receiver consists of a sensitive solar panel or photodiode that captures the modulated light signals.</p>
+  <p>The panel converts the light intensity changes back into voltage variations correlating to the original audio.</p>
+  <p>An LM386 audio amplifier IC, together with capacitors (0.1μF for power supply decoupling, 10μF for input signal conditioning, 100μF for power filtering, and 220μF output coupling capacitor), and a 10kΩ potentiometer for volume control, amplifies this weak signal.</p>
+  <p>The amplified audio is output via an 8Ω speaker, reproducing the transmitted audio accurately within short range (15-20 cm for LED, longer for laser).</p>
+  <p><em>Insert circuit diagram of the receiver here.</em></p>
+</div>
+
+<div class="slide" id="slide9">
+  <h2>Complete Circuit Diagrams</h2>
+  <p>This slide presents comprehensive circuit diagrams for both transmitter and receiver, detailing component connections and configurations.</p>
+  <ul>
+    <li>Transmitter circuit highlighting LED/laser diode modulation by audio input.</li>
+    <li>Receiver circuit showing solar panel detection and LM386 amplifier setup.</li>
+  </ul>
+  <p>Images from trusted sources:</p>
+  <ul>
+    <li><a href="https://circuitdigest.com/sites/default/files/circuitdiagram/Circuit-diagram-for-Audio-transfer-using-LED-and-Li-Fi-Technology.png" target="_blank">LiFi Audio Transfer Circuit Diagram</a></li>
+    <li><a href="https://circuitdigest.com/sites/default/files/inlineimages/u/Transmitter-Circuit-for-Li-Fi.jpg" target="_blank">Transmitter Circuit</a></li>
+  </ul>
+</div>
+
+<div class="slide" id="slide10">
+  <h2>Simulation Setup</h2>
+  <p>Simulation involves using electronic design automation (EDA) tools like Proteus or Multisim.</p>
+  <ul>
+    <li>Modeling the audio input waveform modulating the LED/laser diode in the transmitter block.</li>
+    <li>Representing the solar panel or photodiode as the light receiver in the receiver block.</li>
+    <li>Integrating LM386 amplifier to observe the amplified audio output waveform.</li>
+  </ul>
+  <p>This setup helps validate circuit integrity before physical prototyping.</p>
+</div>
+
+<div class="slide" id="slide11">
+  <h2>Simulation Results</h2>
+  <p>Simulated waveforms demonstrate the transformation of audio signals into light intensity variations at the transmitter and their corresponding electrical signals at the receiver.</p>
+  <p>Amplification stages model signal clarity and volume control.</p>
+  <p>Results illustrate effective analog modulation-demodulation with recognizable audio waveforms, confirming system feasibility.</p>
+  <p><em>(Add screenshots of simulation waveforms here)</em></p>
+</div>
+
+<div class="slide" id="slide12">
+  <h2>LED vs Laser Transmitter Comparison</h2>
+  <ul>
+    <li><strong>LED:</strong> Inexpensive, widely available, safe, limited range approximately 15-20 cm, diffused light pattern.</li>
+    <li><strong>Laser diode:</strong> More focused, higher intensity, longer range up to 15 m, requires eye safety precautions, narrower beam.</li>
+  </ul>
+  <p>Choice depends on range, safety, and cost requirements.</p>
+</div>
+
+<div class="slide" id="slide13">
+  <h2>Advantages of Li-Fi Audio Transfer</h2>
+  <ul>
+    <li>Significantly higher bandwidth and data transfer rates compared to infrared and some RF methods.</li>
+    <li>No electromagnetic interference, beneficial in sensitive environments.</li>
+    <li>Enhanced security since light cannot penetrate walls, limiting interception risk.</li>
+    <li>Simple, low-power circuitry using inexpensive components.</li>
+  </ul>
+</div>
+
+<div class="slide" id="slide14">
+  <h2>Challenges and Limitations</h2>
+  <ul>
+    <li>Strict line-of-sight needed between transmitter and receiver.</li>
+    <li>Ambient lighting conditions can interfere with signal reception.</li>
+    <li>Analog modulation limits data robustness and error correction.</li>
+    <li>Transmission range limited by light source intensity and receiver sensitivity.</li>
+  </ul>
+</div>
+
+<div class="slide" id="slide15">
+  <h2>Future Scope and Enhancements</h2>
+  <ul>
+    <li>Implement digital modulation techniques such as frequency-shift keying (FSK) or OFDM for improved transmission accuracy.</li>
+    <li>Incorporate microcontrollers or digital signal processors (DSPs) for encoding and decoding audio signals.</li>
+    <li>Extend range and reduce ambient noise effects using advanced photodetectors and optical elements.</li>
+    <li>Integrate Li-Fi systems into smart lighting and IoT infrastructures for commercial applications.</li>
+  </ul>
+</div>
+
+<div class="slide" id="slide16">
+  <h2>Team Contributions</h2>
+  <p>The project was a joint effort with all team members equally involved in research, design, simulation, prototyping, and presentation development.</p>
+  <p>Guided continuously by Mr. Glastin Y V, whose expertise ensured academic and technical rigor throughout the project.</p>
+</div>
+
+<div class="slide" id="slide17">
+  <h2>Conclusion</h2>
+  <p>A wireless audio transmission system using Li-Fi was successfully designed, tested, and demonstrated.</p>
+  <p>The system utilizes visible light modulation for analog audio transfer, amplified for clear sound output.</p>
+  <p>This project highlights Li-Fi’s potential in future wireless communication technologies.</p>
+</div>
+
+<div class="slide" id="slide18">
+  <h2>References and Acknowledgments</h2>
+  <ul>
+    <li><a href="https://circuitdigest.com/electronic-circuits/audio-transfer-using-lifi-technology" target="_blank">Circuit Digest: Audio Transfer using Li-Fi Technology</a></li>
+    <li><a href="https://www.instructables.com/LiFi-Experiment-Audio-Transmission-Through-Light/" target="_blank">Instructables: Li-Fi Audio Transmission</a></li>
+    <li>IRJET and other academic research papers on Li-Fi and VLC.</li>
+    <li>Guidance and support from Mr. Glastin Y V.</li>
+  </ul>
+</div>
+
+<div class="nav-buttons" style="text-align:center;margin-bottom:40px;">
+  <button onclick="prevSlide()" id="prevBtn">Previous</button>
+  <button onclick="nextSlide()" id="nextBtn">Next</button>
+</div>
+
+<script>
+const slides = document.querySelectorAll('.slide');
+let currentSlide = 0;
+
+function showSlide(n) {
+  slides.forEach(s => s.classList.remove('active'));
+  slides[n].classList.add('active');
+  currentSlide = n;
+  document.getElementById('prevBtn').disabled = (n === 0);
+  document.getElementById('nextBtn').disabled = (n === slides.length - 1);
+}
+function nextSlide() {
+  if(currentSlide < slides.length - 1) showSlide(currentSlide + 1);
+}
+function prevSlide() {
+  if(currentSlide > 0) showSlide(currentSlide - 1);
+}
+// Initialize
+showSlide(0);
+
+// Keyboard navigation
+document.addEventListener('keydown', e => {
+  if (e.key === 'ArrowRight' || e.key === 'ArrowDown') nextSlide();
+  else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') prevSlide();
+});
+</script>
+
 </body>
 </html>
